@@ -1,0 +1,629 @@
+// landing start
+
+.prc-4{
+    padding-right: 33px !important;
+}
+
+.prc-5{
+    padding-right: 50px !important;
+}
+
+.plc-5{
+    padding-left: 50px !important;
+}
+
+.pc-2{
+    padding: 2em;
+}
+
+.pc-4{
+    padding: 4em;
+}
+
+.pc-5{
+    padding: 5em;
+}
+
+.bg-white-landing{
+    background-color: #edf1f8 !important;
+}
+
+.eye{
+    cursor: pointer !important;
+    opacity: 0;
+}
+
+.eye-off{
+    cursor: pointer !important;
+    opacity: 0;
+}
+
+.bg-white-second-landing{
+    background-color: #eeeeee;
+}
+
+.bg-image-1{
+    height: 100vh;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(./img/cavemen.png);
+}
+
+.bg-image-2{
+    background-image: url(./img/cavemen2.png);
+    height: 100vh;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-image-3{
+    background-image: url(./img/enceladus.png);
+    height: 100vh;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.bg-image-4{
+    background-image: url(./img/god-desert.jpg);
+    height: 100vh;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+// OWL CAROUSEL
+.owl-dots{
+    text-align: center;
+    -webkit-tap-highlight-color: transparent;
+    position: absolute;
+    z-index: 1;
+    bottom: 5px;
+    left: 45%;
+}
+
+.owl-dots .owl-dot{
+    background: 0 0;
+    color: inherit;
+    border: none;
+    padding: 0!important;
+    font: inherit;
+}
+
+.owl-dots .owl-dot span{
+    width: 10px;
+    height: 10px;
+    margin: 5px 7px;
+    background: #D6D6D6;
+    display: block;
+    transition: opacity .2s ease;
+    border-radius: 30px;
+}
+
+.owl-dots .owl-dot.active span{
+    background: #2d3436;
+}
+
+.sub-card{
+    width: 80%;
+    background-color: #fafafa;
+    padding: 0;
+    text-align: left;
+    display: block;
+    margin: 0;
+    bottom: 40px;
+    position: absolute;
+    left: 80px;
+}
+
+.sub-card .row .col-md-3{
+    padding-left: 2.3em !important;
+    padding-right: 2.3em !important;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+.sub-card .row .col-md-9{
+    padding-left: 2.1em !important;
+    padding-right: 2.1em !important;
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+
+
+.circle-img{
+    background-image: url(./img/cavemen.png);
+    height: 90px;
+    display: block;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+}
+
+// Owl end
+
+.text-dark-landing{
+    color: #2d3436 !important;
+}
+
+.text-green-landing{
+    color: #00e676 !important;
+}
+
+.f-white{
+    color: #fff !important;
+}
+
+// progress line
+
+#progressbar {
+    margin-bottom: 30px;
+    padding: 0;
+    overflow: hidden;
+    color: #2d3436;
+}
+
+#progressbar .active {
+    color: #2d3436;
+}
+
+#progressbar li {
+    list-style-type: none;
+    font-size: 12px;
+    width: 25%;
+    float: left;
+    position: relative;
+    padding-bottom: 2rem;
+}
+
+#progressbar li strong {
+    cursor: pointer !important;
+}
+
+#progressbar #register:before {
+    content: "";
+}
+
+#progressbar #login:before {
+    content: "";
+}
+
+#progressbar li:before {
+
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+#progressbar li:after {
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #c0cdd3;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    z-index: 1;
+    border-radius: 0.5px;
+}
+
+#progressbar li.active:before,
+#progressbar li.active:after {
+    background: #00e676
+}
+
+// end
+
+
+// float input
+
+.float-container {
+    position: relative;
+}
+.float-container input {
+  border: none;
+  font-size: 14px;
+  margin: 16px 0 10px;
+  outline: 0;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  padding-left: 0.7rem;
+  color: #2d3436 !important;
+  border-radius: 3px !important;
+  background-color: #fff !important;
+  box-shadow: none !important;
+  font-weight: 700 !important;
+}
+.float-container label {
+  font-size: 12px;
+  position: absolute;
+  transform-origin: top left;
+  transform: translate(0, 11px) scale(1);
+  transition: all .1s ease-in-out;
+  padding-left: 1rem;
+  color: #2d3436;
+  font-weight: 700 !important;
+}
+
+.float-container select{
+    color: #2d3436 !important;
+    font-weight: 500 !important;
+}
+
+.float-container.active label {
+  transform: translate(0, 4px) scale(.75);
+  font-weight: 500 !important;
+}
+
+// end
+
+// landing end
+
+a:hover{
+    background: none !important;
+}
+
+.badge{
+    color: #fff !important;
+    text-align: center !important;
+}
+
+.badge:hover{
+    background: #3b3b3b !important;
+    font: #fff !important;
+}
+
+.dropdown-custom {
+    color: #3b3b3b !important;
+}
+
+.icon-action{
+    cursor: pointer !important;
+}
+
+.btn{
+    padding: 8px 16px !important;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.btn-pill{
+    border-radius: 10rem;
+}
+
+.btn-navbar{
+    border-radius: 3px !important;
+    padding: 8px 32px !important;
+    font-weight: 700 !important;
+}
+
+.btn-green-landing{
+    color: #fff !important;
+    background-color: #00e676 !important;
+    border-color: none !important;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08) !important;
+}
+
+.btn-outline-green-landing{
+    color: #2d3436 !important;
+    background-color: transparent !important;
+    border: 1px solid #00e676 !important;
+}
+
+.btn-outline-green-landing:hover{
+    color: #fff !important;
+    border-color: none !important;
+    background-color: #00e676 !important;
+}
+
+.navbar{
+    padding: 1rem 50px !important;
+}
+
+.shape-header{
+    padding: 40px 50px;
+    margin-top: 50px;
+}
+
+.padding-shape{
+    padding: 40px;
+}
+
+.padding-shape .col-md-8 h1{
+    font-weight: 700;
+    color: #0c9c56;
+}
+
+.padding-shape .col-md-8 p{
+    font-weight: 500;
+    color: #0c9c56;
+    font-size: 20px;
+}
+
+.bg-shape{
+    background-image: url(./img/Hero.png);
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+    border-radius: 3rem;
+}
+
+.bg-shape-image{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.btn-readmore-section{
+    padding: 0px 50px 50px 50px;
+}
+
+.timeline-section{
+    padding: 100px 50px 50px 50px;
+}
+
+.timeline-body .timeline-desc{
+    text-align: center;
+}
+
+.timeline-body .timeline-desc p{
+    color: #2d3436;
+}
+
+.timeline-body .timeline-title{
+    text-align: center;
+    padding: 10px 0px 0px 0px;
+}
+
+.timeline-body .timeline-title h4{
+    color: #2d3436;
+    font-weight: 600;
+}
+
+.timeline-body .timeline-icon{
+    text-align: center;
+}
+
+.timeline-body .timeline-icon .tl-main-icon-active{
+    background: #00e676;
+    padding: 9px 10px;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.timeline-body .timeline-icon .tl-main-icon{
+    background: #2d3436;
+    padding: 9px 10px;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.form-section{
+    padding: 20px 50px;
+}
+
+.form-title{
+    padding: 0px 0px 10px 0px;
+}
+
+.form-title h3{
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.complaint-title{
+    padding: 0px 0px 10px 0px;
+}
+
+.complaint-title h4{
+    color: #2d3436;
+    font-weight: 600;
+}
+
+.report-option{
+    margin-top: 150px;
+    float: right;
+}
+
+.btn-attachment{
+    border: 2px #2d3436 dashed !important;
+    border-radius: 3px !important;
+    border-width: 2px !important;
+    color: #2d3436 !important;
+    font-size: 16px !important;
+    padding: 15px 0px !important;
+}
+
+.container-file-upload{
+    margin-top: 30px;
+    padding: 0;
+}
+
+.file-upload{
+    border: 1px #2d3436 solid;
+    padding: 5px;
+    margin-bottom: 2px;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+.file-upload-body{
+    margin: 0 !important;
+}
+
+.file-upload-body .file-size{
+    font-size: 12px;
+    font-weight: 400;
+    color: #2d3436;
+}
+
+.file-upload-body .file-title{
+    font-size: 12px;
+    font-weight: 400;
+    color: #2d3436;
+}
+
+.file-upload-body .file-icon{
+    color: #2d3436;
+}
+
+.file-upload-body .file-bg{
+    width: 100%;
+    height: auto;
+    background: url(./img/cavemen.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.category-section{
+    padding: 20px 50px;
+}
+
+.category-title{
+    padding: 0px 0px 10px 0px;
+}
+
+.category-title h3{
+    font-weight: 700;
+    color: #2d3436;
+}
+
+.category-main-card{
+    padding: 0;
+}
+
+.category-sub-card{
+    background-color: #fff;
+    color: #2d3436;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.category-sub-card-active{
+    background-color: #6b37ff;
+    color: #fff !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.label-category i{
+    color: #6b37ff;
+    position: absolute;
+    left: 8px;
+}
+
+.card-category-title{
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card-category-title-active{
+    color: #fff;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+// .category-sub-card .row .col-md-2 .custom-control-label::before{
+//     border: 2px solid #6b37ff !important;
+//     left: 0rem !important;
+//     top: -0.3rem !important;
+//     border-radius: 30px !important;
+//     padding: 15px 15px !important;
+// }
+
+// .category-sub-card .row .col-md-2 .custom-control-label::after{
+//     border: 2px solid #fff !important;
+//     left: 0rem !important;
+//     top: -0.3rem !important;
+//     border-radius: 30px !important;
+//     padding: 15px 15px !important;
+// }
+
+// .category-sub-card .row .col-md-2 .custom-control-input:checked{
+//     color: #fff;
+//     border-color: #fff;
+//     background-color: #fff;
+//     box-shadow: none;
+//     border-radius: 30px;
+//     padding: 15px;
+//     left: 0px;
+//     top: -0.3rem;
+// }
+
+.icon-card-active{
+    background: #fff;
+    color: #6b37ff;
+    padding: 7px 12px;
+    border-radius: 30px;
+}
+
+.icon-card{
+    background: #2d3436;
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.icon1-card-isactive{
+    padding: 2px 13px;
+    border-radius: 30px;
+    border: 2px #6b37ff solid;
+    cursor: pointer;
+}
+
+.icon1-card-active{
+    background: #fff;
+    color: #6b37ff;
+    padding: 5px;
+    border-radius: 30px;
+}
+
+.navbar-active{
+    background: #fafafa !important;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.2) !important;
+}
+
+.table-title-wrapper{
+    position: relative !important;
+    display: -webkit-box !important;
+    display: flex !important;
+    -webkit-box-align: center !important;
+    align-items: center !important;
+    padding-bottom: 10px !important;
+}
+
+.table-title-wrapper .table-title-heading{
+    display: flex !important;
+    align-content: center !important;
+    -webkit-box-align: center !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.table-title-wrapper .table-title-action{
+    margin-left: auto !important;
+}
+
+.app-logo{
+    height: 23px !important;
+    width: 97px !important;
+    background: url(./img/logo-inverse.png) !important;
+}
+
+.hamburger-box {
+    width: 32px !important;
+}

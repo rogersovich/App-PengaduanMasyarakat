@@ -1,0 +1,255 @@
+<%= render 'homes/navbar' %>
+
+<div class="position-relative">
+    <div class="row shape-header">
+        <div class="col-md-12">
+            <div class="bg-shape">
+                <div class="row padding-shape">
+                    <div class="col-md-8">
+                        <h1>Layanan Aspirasi dan Pengaduan Online Masyarakat</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quae molestias, nihil</p>
+                    </div>
+                    <div class="col-md-4 bg-shape-image"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= form_tag('/proses', multipart: true) do |form|%>
+    <div class="category-section">
+        <div class="category-title">
+            <h3>Pilih Kategori</h3>
+        </div>
+        <div class="row category-main-card">
+            <% @categories.each do |c| %>
+            <div class="col-md-4 pb-3">
+                <div class="category-sub-card">
+                    <div class="row">
+                        <div class="col-md-2 pt-2">
+                            <!-- <i class="icon1-card-isactive"></i> -->
+                            <input type="radio" id="icon-<%= c.id %>" name="optionReport" class="custom-control-input">
+                            <label class="custom-control-label label-category p-1" for="icon-<%= c.id %>">
+                                <i></i>
+                            </label>
+                        </div>
+                        <div class="col-md-8 pt-1">
+                            <h5 class="card-category-title">
+                                <%= c.name %>
+                            </h5>
+                        </div>
+                        <div class="col-md-2 pt-1">
+                            <i class="fa fa-info icon-card" data-toggle="tooltip" data-placement="top" title="blablablabalblabalbalblba"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% end %>
+        </div>
+    </div>
+    <div class="form-section">
+        <div class="form-title">
+            <h3>Tulis Laporanmu</h3>
+        </div>
+        <div class="row">
+            <div class="col-md-8">
+               <textarea name="complaint" class="form-control form-control-alternative" rows="20"></textarea>
+            </div>
+            <div class="col-md-4">
+                <div class="complaint-title">
+                    <h4>Lampiran <i class="fa fa-paperclip"></i></h4>
+                </div>
+                <div class="complaint-body">
+                    
+                    <div id="id_dropzone" class="btn btn-block btn-attachment dropzone">    
+                        <div class="dz-message"
+                            style="margin: 20px">
+                        Drag your cats' pics here! Or
+                        <button type="button">
+                            Upload Lampiran (max 2MB)
+                        </button>
+                        </div>
+                    </div>
+                        
+                    <div class="container-file-upload">
+                        <div class="file-upload">
+                            <div class="row file-upload-body">
+                                <div class="col-md-2 file-bg"></div>
+                                <div class="col-md-6 file-title">
+                                    Aetetic.jpg
+                                </div>
+                                <div class="col-md-3 file-size">
+                                    0.2 MB
+                                </div>
+                                <div class="col-md-1 file-icon">
+                                    <i class="fa fa-cross"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="report-option">
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="secretId" name="optionReport" class="custom-control-input">
+                        <label class="custom-control-label" for="secretId">
+                            Rahasia
+                        </label>
+                    </div>
+                    <div class="custom-control custom-radio custom-control-inline">
+                        <input type="radio" id="anonimId" name="optionReport" class="custom-control-input">
+                        <label class="custom-control-label" for="anonimId">
+                            Anonim
+                        </label>
+                    </div>
+                    <%= submit_tag 'Lapor', class: 'btn btn-green-landing mt-3' %>
+                </div>
+            </div>
+        </div>
+    </div>
+    <% end %>
+    <div class="timeline-section">
+        <div class="row">
+            <div class="col-md-3 timeline-body">
+                <div class="timeline-icon">
+                    <i class="fa fa-atom tl-main-icon-active"></i>
+                </div>
+                <div class="timeline-title">
+                    <h4>
+                        Tulis Laporan
+                    </h4>
+                </div>
+                <div class="timeline-desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="col-md-3 timeline-body">
+                <div class="timeline-icon">
+                    <i class="fa fa-moon tl-main-icon"></i>
+                </div>
+                <div class="timeline-title">
+                    <h4>
+                        Proses Verifikasi
+                    </h4>
+                </div>
+                <div class="timeline-desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="col-md-3 timeline-body">
+                <div class="timeline-icon">
+                    <i class="fa fa-moon tl-main-icon"></i>
+                </div>
+                <div class="timeline-title">
+                    <h4>
+                        Beri Tanggapan
+                    </h4>
+                </div>
+                <div class="timeline-desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="col-md-3 timeline-body">
+                <div class="timeline-icon">
+                    <i class="fa fa-moon tl-main-icon"></i>
+                </div>
+                <div class="timeline-title">
+                    <h4>
+                        Selesai
+                    </h4>
+                </div>
+                <div class="timeline-desc">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row btn-readmore-section">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 text-center">
+            <button class="btn btn-outline-green-landing">
+                Pelajari Lebih Lanjut
+            </button>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+</div>
+
+<script>
+
+    Dropzone.autoDiscover = false;
+    
+    $(document).ready(function(){
+
+        $('.category-sub-card').on('click', function(){
+
+            var self = $(this).hasClass('category-sub-card-active')
+            if (self) {
+                //ACTIVE
+            }else{
+                //ISACTIVE
+
+                $('.category-sub-card-active').find('.row .col-md-2 .icon-card-active').addClass('icon-card')
+                $('.category-sub-card-active').find('.row .col-md-2 .icon-card-active').removeClass('icon-card-active')
+                $('.category-sub-card-active').find('.row .col-md-8 .card-category-title-active').addClass('card-category-title')
+                $('.category-sub-card-active').find('.row .col-md-8 .card-category-title-active').removeClass('card-category-title-active')
+                $('.category-sub-card-active').find('.row .col-md-2 .custom-control-label i').removeClass('fa fa-check')
+                $('.category-sub-card-active').addClass('category-sub-card')
+                $('.category-sub-card-active').removeClass('category-sub-card-active')
+
+                $(this).addClass('category-sub-card-active')
+                $(this).removeClass('category-sub-card')
+                $(this).find('.row .col-md-2 .icon-card').addClass('icon-card-active')
+                $(this).find('.row .col-md-2 .icon-card').removeClass('icon-card')
+                $(this).find('.row .col-md-2 .custom-control-label i').addClass('fa fa-check')
+                $(this).find('.row .col-md-8 .card-category-title').addClass('card-category-title-active')
+                $(this).find('.row .col-md-8 .card-category-title').removeClass('card-category-title')
+            }
+
+        })
+
+        $('.container-file-upload').hide()
+
+        var dropzone = $("#id_dropzone").dropzone({
+            parallelUploads: 2,
+            maxFilesize: 2,
+            thumbnailHeight: 120,
+            thumbnailWidth: 120, 
+            addRemoveLinks: true,
+            autoProcessQueue: false,
+            uploadMultiple: true,
+            url: '/proses',
+            init: function() {
+                var dropzone = this
+                
+                var form = $('#id_dropzone').on('click', function(event){
+                    if(dropzone.getQueuedFiles().length > 0){
+                        event.preventDefault();
+                        event.stopPropagation();
+                        dropzone.processQueue();
+                    }
+
+                    console.log(dropzone)
+                    
+                })
+
+
+            },
+            successmultiple: function(data,response) {
+                alert(response);
+            }
+        });
+
+        var position = $(window).scrollTop();
+        
+
+        $(window).scroll(function() {
+        var scroll = $(window).scrollTop();
+        if (scroll > position) {
+            $('.navbar ').addClass('navbar-active')
+            $('.navbar').show()
+        } else {
+            
+        }
+        position = scroll;
+        });
+
+    })
+</script>

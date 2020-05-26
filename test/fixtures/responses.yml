@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  complaint_id: one
+  user_id: one
+  tanggapan: MyText
+  tanggal: 2020-03-28
+
+two:
+  complaint_id: two
+  user_id: two
+  tanggapan: MyText
+  tanggal: 2020-03-28

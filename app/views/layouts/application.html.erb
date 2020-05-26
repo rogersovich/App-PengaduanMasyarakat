@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AppComplaint</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- CSS -->
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- Icons -->
+    <%= stylesheet_link_tag 'nucleo', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <!-- fonts -->
+
+    <!-- Other -->
+    <%= stylesheet_link_tag 'owl.carousel.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'owl.theme.default.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'dropzone', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- JS -->
+    <!-- Core -->
+    <%= javascript_include_tag 'jquery-3', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <%= javascript_include_tag 'bootstrap.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap.bundle.min', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'headroom.min', 'data-turbolinks-track': 'reload' %> 
+    <%= javascript_include_tag 'popper.min', 'data-turbolinks-track': 'reload' %> 
+    <!-- Argon -->
+    <%= javascript_include_tag 'argon', 'data-turbolinks-track': 'reload' %>
+    <!-- Other -->
+    <%= javascript_include_tag 'owl.carousel', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'dropzone', 'data-turbolinks-track': 'reload' %>
+
+
+  </head>
+
+  <body class="bg-white-landing">
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>

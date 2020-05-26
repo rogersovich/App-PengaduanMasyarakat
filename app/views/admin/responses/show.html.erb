@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Complaint:</strong>
+  <%= @response.complaint_id_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @response.user_id_id %>
+</p>
+
+<p>
+  <strong>Tanggapan:</strong>
+  <%= @response.tanggapan %>
+</p>
+
+<p>
+  <strong>Tanggal:</strong>
+  <%= @response.tanggal %>
+</p>
+
+<%= link_to 'Edit', edit_response_path(@response) %> |
+<%= link_to 'Back', responses_path %>

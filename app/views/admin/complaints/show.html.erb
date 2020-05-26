@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Society:</strong>
+  <%= @complaint.society_id_id %>
+</p>
+
+<p>
+  <strong>Isi laporan:</strong>
+  <%= @complaint.isi_laporan %>
+</p>
+
+<p>
+  <strong>Foto:</strong>
+  <%= @complaint.foto %>
+</p>
+
+<p>
+  <strong>Tanggal:</strong>
+  <%= @complaint.tanggal %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @complaint.status %>
+</p>
+
+<%= link_to 'Edit', edit_complaint_path(@complaint) %> |
+<%= link_to 'Back', complaints_path %>

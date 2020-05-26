@@ -1,0 +1,113 @@
+<%= render 'layouts/elements/navbar' %>
+
+<div class="app-main">
+  <%= render 'layouts/elements/sidebar' %>
+  
+  <div class="app-main__outer">
+    <div class="app-main__inner">
+        <div class="row">
+            <div class="col-md-12 col-xl-12">
+                <div class="main-card mb-3 card">
+                    <div class="card-body">
+                        <div class="table-title-wrapper">
+                            <div class="table-title-heading">
+                                <h4>List Masyarakat</h4>
+                            </div>
+                            <div class="table-title-action">
+                                <%= link_to 'Tambah', new_admin_society_path, class: 'btn btn-pill btn-primary' %>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="mb-0 table" id="data_table">
+                                <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Nama</th>
+                                    <th>Username</th>
+                                    <th>No Telp</th>
+                                    <th>Action</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <% no = 1 %>
+                                <% @societies.each do |s| %>
+                                
+                                <tr>
+                                    <th scope="row"><%= no %></th>
+                                    <td><%= s.name %></td>
+                                    <td><%= s.username %></td>
+                                    <td><%= s.telp %></td>
+                                    <td>
+                                      
+                                        <%= link_to 'Ubah', edit_admin_society_path(s), class: 'badge badge-pill badge-success', tabindex: '0' %>
+                                        <%= link_to "Hapus", "javascript:;", {
+                                          :class => "btn-delete badge badge-pill badge-danger",
+                                          :data => { :link => admin_societies_destroy_path(s)}, tabindex: '0'}
+                                        %>
+                                        
+                                    </td>
+                                </tr>
+                                <% no+= 1 %>
+                                <% end %>
+                                </tbody>
+                            </table>
+                            <div class="mt-4">
+                                <%= will_paginate @societies, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, list_classes: %w(pagination pagination-sm) %>
+                            </div>
+                        </div>  
+                    </div>
+                   
+                </div>
+            </div>
+        </div>          
+        
+    </div>   
+  </div>
+  
+</div>
+
+<script>
+    $(document).ready(function(){
+
+        $('.btn-delete').on('click', function() {
+            
+            Swal.fire({
+                title: 'Kamu yakin ingin menghapus?',
+                text: "Semua file yang terhapus tidak bisa di kembalikan!",
+                type: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#1aae6f',
+                cancelButtonColor: '#f80031',
+                confirmButtonText: 'Ya',
+                cancelButtonText: 'Tidak'
+            }).then((result) => {
+                if (result.value) {
+                    var data = $(this).data('link')
+                    window.location = data;
+                }else{
+                    Swal.fire(
+                    'Telah dibatalkan!',
+                    'File anda tidak jadi di hapus.',
+                    'error'
+                    )
+                }
+            })
+        })
+
+        $('#data_table').DataTable({
+            paging: false,
+        });
+
+        $('.icon-action ').on('click', function(){
+            $('#action').toggle(200)
+        })
+
+        $('.row .col-md-6').first().hide()
+        $('.dataTables_filter').addClass('text-left')
+        $('.dataTables_filter').css({'padding-bottom':'10px'})
+        $('.dataTables_filter label').css({'padding-left':'0px'})
+        $('.dataTables_filter label').addClass('mt-2')
+
+
+    })
+</script>

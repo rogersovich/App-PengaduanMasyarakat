@@ -1,0 +1,49 @@
+<%= render 'layouts/elements/navbar' %>
+
+<div class="app-main">
+  <%= render 'layouts/elements/sidebar' %>
+  
+  <div class="app-main__outer">
+    <div class="app-main__inner">
+        <div class="row">
+            <div class="col-md-12 col-xl-12">
+                <div class="main-card mb-3 card">
+                    <div class="card-body">
+                        <div class="table-title-wrapper">
+                            <div class="table-title-heading">
+                                <h4>Edit Data</h4>
+                            </div>
+                            <div class="table-title-action">
+                                <%= link_to 'Kembali', admin_societies_path, class: 'btn btn-pill btn-primary' %>
+                            </div>
+                        </div>
+                        
+                        <%= form_with(model: society, url: admin_society_path, local: true) do |f| %>
+                            <div class="position-relative form-group">
+                                <%= f.label :name %>
+                                <%= f.text_field :name, class: 'form-control', required: true %>
+                            </div>
+                            <div class="position-relative form-group">
+                                <%= f.label :username %>
+                                <%= f.text_field :username ,class: 'form-control', required: true %>
+                            </div>
+                            <div class="position-relative form-group">
+                                <%= f.label :password %>
+                                <%= f.password_field :password ,class: 'form-control'%>
+                            </div>
+                            <div class="position-relative form-group">
+                                <%= f.label :telp %>
+                                <%= f.text_field :telp ,class: 'form-control', required: true %>
+                            </div>
+                            <div class="form-group mt-4 text-right">
+                                <%= f.submit 'Update', class: 'btn btn-success' %>
+                            </div>
+                        <% end %>   
+                    </div> 
+                </div>
+            </div>
+        </div>          
+        
+    </div>   
+  </div>
+</div>
